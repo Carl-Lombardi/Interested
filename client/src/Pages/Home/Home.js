@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import logo from "../../assets/images/logo.png";
 import "./Home.css";
+import ContainedButtons from "../../Components/Button/button"
+
 
 class Home extends Component {
     render() {
@@ -14,7 +16,10 @@ class Home extends Component {
 
                 <img src={logo} className="Home-logo" alt="logo" />
 
+              <ContainedButtons></ContainedButtons>
+
             </div>
+
         );
     }
 }

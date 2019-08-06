@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Toolbar from "./Components/Toolbar/Toolbar.js";
-import SideToggle from "./Components/SideToggle/SideToggle.js";
-import Backdrop from "./Components/Backdrop/Backdrop.js";
+import Toolbar from "./components/Toolbar/Toolbar.js";
+import SideToggle from "./components/SideToggle/SideToggle.js";
+import Backdrop from "./components/Backdrop/Backdrop.js";
 import "./App.css";
-import "./Components/Toolbar/Toolbar.css";
+import "./components/Toolbar/Toolbar.css";
 
 class App extends Component {
   state ={
