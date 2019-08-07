@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import toolbar from "./components/toolbar/toolbar.js";
+import Toolbar from "./components/toolbar/toolbar.js";
 import SideToggle from "./components/sideToggle/sideToggle.js";
 import Backdrop from "./components/backdrop/backdrop.js";
 import "./App.css";
@@ -29,7 +29,7 @@ class App extends Component {
     }
    return (
       <div style= {{height: "100%"}}>
-        <toolbar sideClickHandler={this.SideToggleClickHandler} />
+        <Toolbar sideClickHandler={this.SideToggleClickHandler} />
         <SideToggle show={this.state.SideToggleOpen} />
         {backdrop}
         <p>This is the page content!</p>
