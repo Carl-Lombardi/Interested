@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import './SideToggle.css';
+import React from 'react';
+import './sideToggle.css';
 
 const SideToggle = props => {
     let toggleClasses = "Side-Toggle";
