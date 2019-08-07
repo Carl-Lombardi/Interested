@@ -1,4 +1,4 @@
-import React, { Component } from "./node_modules/react";
+import React, { Component } from "react";
 import logo from "../../assets/images/logo.png";
 import "./Home.css";
 import ContainedButtons from "../../Components/Button/button"
