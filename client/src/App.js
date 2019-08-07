@@ -29,7 +29,7 @@ class App extends Component {
     }
    return (
       <div style= {{height: "100%"}}>
-        <Toolbar sideClickHandler={this.SideToggleClickHandler} />
+        <toolbar sideClickHandler={this.SideToggleClickHandler} />
         <SideToggle show={this.state.SideToggleOpen} />
         {backdrop}
         <p>This is the page content!</p>
