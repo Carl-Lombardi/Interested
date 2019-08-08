@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "../../assets/images/logo.png";
 import "./Home.css";
-import ContainedButtons from "../../Components/Button/button"
+import ContainedButtons from "../../components/button/button"
 
 
 class Home extends Component {
