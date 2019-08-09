@@ -4,7 +4,7 @@ import SideToggle from "./Components/sideToggle/sideToggle.js";
 import Backdrop from "./Components/backdrop/backdrop.js";
 import "./App.css";
 import "./Components/toolbar/toolbar.css";
-
+//changed caps
 
 class App extends Component {
   state ={
