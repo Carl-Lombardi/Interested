@@ -1,6 +1,5 @@
-import React from 'react';
-
-import SideToggleButton from '../SideToggle/SideToggleButton.js';
+import React from "react";
+import SideToggleButton from '../sideToggle/sideToggleButton.js';
 
 const toolbar = props => (
     <header className="toolbar">

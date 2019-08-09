@@ -1,5 +1,5 @@
-import React from 'react';
-import './SideToggleButton.css';
+import React from "react";
+import './sideToggleButton.css';
 
 const SideToggleButton = props => (
     <button className="toggle-button" onClick={props.click}>
