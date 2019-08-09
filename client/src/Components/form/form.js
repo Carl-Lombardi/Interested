@@ -111,7 +111,10 @@ export default function ControlledOpenSelect() {
           <MenuItem value={Transsexual-Person}>Transsexual Person</MenuItem>
           <MenuItem value={Transsexual-Woman}>Transsexual Woman</MenuItem>
           <MenuItem value={Two-Spirit}>Two-Spiritr</MenuItem>
+<<<<<<< HEAD
           <MenuItem value={Zi}>Zi</MenuItem>
+=======
+>>>>>>> master
         </Select >
       </FormControl >
     </form >

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import SideToggleButton from '../sideToggle/sideToggleButton.js';
 
-const toolbar = props => (
+const Toolbar = props => (
     <header className="toolbar">
          <nav className="toolbar_navigation">
             <div className="toolbar_toggle-button">
@@ -21,4 +21,4 @@ const toolbar = props => (
     </header>
 );
 
-export default toolbar;
+export default Toolbar;
