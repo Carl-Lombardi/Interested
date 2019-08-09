@@ -6,8 +6,8 @@ import  ControlledOpenSelect from "../../components/form/form";
 class results extends Component {
     render() {
         return (
-            <div className="results">
-                <div className="results-header">
+            <div className="result">
+                <div className="result-header">
 
                     <h2>INTERESTED!?</h2>
 
