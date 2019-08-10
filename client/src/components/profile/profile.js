@@ -1,5 +1,5 @@
 import React from 'react';
-import  ControlledOpenSelect from "../../components/form/form";
+// import  ControlledOpenSelect from "../../components/form/form";
 
 class Profile extends React.Component {
     prof = {
@@ -72,6 +72,6 @@ render() {
     );
 }
 }
-<ControlledOpenSelect></ControlledOpenSelect>
+// <ControlledOpenSelect></ControlledOpenSelect>
 
 export default Profile;
