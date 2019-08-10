@@ -4,6 +4,7 @@ import SideToggle from "./components/sideToggle/sideToggle.js";
 import Backdrop from "./components/backdrop/backdrop.js";
 import "./App.css";
 import "./components/toolbar/toolbar.css";
+import Profile from "./components/profile/profile";
 
 
 class App extends Component {
@@ -33,6 +34,11 @@ class App extends Component {
         <SideToggle show={this.state.SideToggleOpen} />
         {backdrop}
         <p>This is the page content!</p>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Profile />
       </div>
     );
   }

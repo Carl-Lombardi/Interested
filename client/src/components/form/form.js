@@ -45,7 +45,7 @@ export default function ControlledOpenSelect() {
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={age}
+          value={gender}
           onChange={handleChange}
           inputProps={{
             name: 'Gender',
@@ -110,7 +110,7 @@ export default function ControlledOpenSelect() {
           <MenuItem value={Transsexual-Man}>Transsexual Man</MenuItem>
           <MenuItem value={Transsexual-Person}>Transsexual Person</MenuItem>
           <MenuItem value={Transsexual-Woman}>Transsexual Woman</MenuItem>
-          <MenuItem value={Two-Spirit}>Two-Spiritr</MenuItem>
+          <MenuItem value={Two-Spirit}>Two-Spirit</MenuItem>
         </Select >
       </FormControl >
     </form >
