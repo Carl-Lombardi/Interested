@@ -27,6 +27,8 @@ class Login extends Component {
       });
   }
 
+ 
+
   signup(e){
     e.preventDefault();
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
