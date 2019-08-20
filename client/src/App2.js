@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 //add 3 imports
 import fire from './config/Fire';
-import Home from './Home';
+import Home from './pages/Home/home';
 import Login from './Login';
 
 class App extends Component {
