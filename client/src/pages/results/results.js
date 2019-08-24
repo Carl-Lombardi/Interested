@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import  ControlledOpenSelect from "../../components/form/form";
+import  ControlledOpenSelect from "../../components/gen/gen";
 
 
 
