@@ -1,26 +1,39 @@
 import React, { Component } from "react";
-import  ControlledOpenSelect from "../../components/gen/gen";
+// import Results1 from '../../components/results/results';
+import ControlledOpenSelect from "../../components/gen/gen";
 
 
+class Results extends Component {
+ constructor() {
+   super();
+    this.state = {
+        users: []
+      }
+    }
+      componentDidMount() {
+        fetch('/api/users')
+        .then(res => res.json())
+        .then(users => this.setState({users}, () => console.log("Matches Fetched", users)))
+        .catch(console.log)
+      }
 
-class results extends Component {
+
     render() {
         return (
+         
             <div className="results">
                 <div className="results-header">
-
-                    <h2>INTERESTED!?</h2>
-
+                {/* <Results1 results={this.state.results} /> */}
                     <ControlledOpenSelect></ControlledOpenSelect>
                 </div>
 
-               
-
-              
+<ul>
+  {this.state.users.map(users =>
+    <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state}</li>
+    )}
+</ul>
             </div>
-
         );
     }
-}
-
-export default results;
+ }
+ export default Results;
