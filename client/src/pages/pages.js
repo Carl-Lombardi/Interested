@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Profile from "../components/profile/profile";
+import PostForm from "../components/profile/Test";
 import Results from "../pages/results/results";
 import Home from "../pages/Home/home"
 
@@ -12,7 +12,7 @@ function Pages() {
             <Router>
                 <div>
                      <Route exact path="/" component={Home} />
-                     <Route exact path="/profile" component={Profile} />
+                     <Route exact path="/profile" component={PostForm} />
                     <Route exact path="/results" component={Results} />
                 </div>
             </Router>

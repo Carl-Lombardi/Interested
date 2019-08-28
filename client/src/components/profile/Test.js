@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Toolbar from '../toolbar/toolbar';
 import DeleteBtn from "../DeleteBtn/index";
 // import axios from 'axios'
 import API from '../../utils/API';
@@ -53,7 +54,7 @@ class PostForm extends Component {
                 hobbies: this.state.hobbies,
                 email: this.state.email
               })
-                .then(res => this.loadUser())
+                .then(res => this.loadUsers())
                 .catch(err => console.log(err));
             }
           };
@@ -62,6 +63,7 @@ class PostForm extends Component {
         const { name, age, gender, state, hobbies, email } = this.state
         return (
             <div>
+              <Toolbar/>
                 <form onSubmit={this.handleFormSubmit}>
                     <div>
                         <label>Name:  </label>
@@ -131,7 +133,7 @@ class PostForm extends Component {
                   <ListItem key={users._id}>
                     <Link to={"/api/users" + users._id}>
                       <strong>
-                        {users.name} by {users.age}
+                        Name: {users.name} Age: {users.age}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteUser(users._id)} />
