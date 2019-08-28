@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Toolbar from '../toolbar/toolbar';
+
 class PostForm extends Component {
     constructor(props) {
         super(props)
@@ -38,6 +40,7 @@ class PostForm extends Component {
         const { name, age, gender, state, hobbies, email } = this.state
         return (
             <div>
+                <Toolbar></Toolbar>
                 <form onSubmit={this.submitHandler}>
                     <div>
                         <label>Name:  </label>
