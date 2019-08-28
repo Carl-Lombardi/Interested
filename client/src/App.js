@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Firebase1 from './components/firebase/firebase';
-import Profile from "./pages/Profile/Profile";
+import PostForm from "./components/profile/Test";
 import Results from "./pages/results/results";
+
 
 
 function App() {
@@ -13,10 +14,10 @@ function App() {
                 <div>
 
                     <Firebase1></Firebase1>
-                            
-                    <Route exact path="/profile" component={Profile} />
+
+                    <Route exact path="/profile" component={PostForm} />
                     <Route exact path="/results" component={Results} />
-                    
+
                 </div>
             </Router>
         </div>
@@ -25,4 +26,3 @@ function App() {
 
 
 export default App;
-

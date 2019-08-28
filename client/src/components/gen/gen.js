@@ -4,7 +4,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -36,9 +35,6 @@ export default function ControlledOpenSelect() {
 
   return (
     <form autoComplete="off">
-      <Button className={classes.button} onClick={handleOpen}>
-        Open the select
-      </Button>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="interested">Gender</InputLabel>
         <Select
@@ -52,8 +48,11 @@ export default function ControlledOpenSelect() {
             id: 'interested',
           }}
         >
+          
          <MenuItem value=""><em>None</em></MenuItem>
-          <MenuItem value="Agender">Agender</MenuItem>
+         <MenuItem value="Male">Male</MenuItem>
+         <MenuItem value="Female">Female</MenuItem>
+          {/* <MenuItem value="Agender">Agender</MenuItem>
           <MenuItem value="Androgyne">Androgyne</MenuItem>
           <MenuItem value="Androgynous">Androgynousr</MenuItem>
           <MenuItem value="Bigender">Bigender</MenuItem>
@@ -108,7 +107,7 @@ export default function ControlledOpenSelect() {
           <MenuItem value="Transsexual-Man">Transsexual Man</MenuItem>
           <MenuItem value="Transsexual-Person">Transsexual Person</MenuItem>
           <MenuItem value="Transsexual-Woman">Transsexual Woman</MenuItem>
-          <MenuItem value="Two-Spirit">Two-Spirit</MenuItem>
+          <MenuItem value="Two-Spirit">Two-Spirit</MenuItem> */}
         </Select >
       </FormControl >
     </form >
