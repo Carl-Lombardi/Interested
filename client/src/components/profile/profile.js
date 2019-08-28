@@ -1,127 +1,103 @@
-import React from 'react';
-
-class Profile extends React.Component {
+import React, { Component } from 'react'
+import axios from 'axios'
+class PostForm extends Component {
     constructor(props) {
-    super(props);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeGender = this.onChangeGender.bind(this);
-    this.onChangeAge = this.onChangeAge.bind(this);
-    this.onChangeState = this.onChangeState.bind(this);
-    this.onChangeHobbies =  this.onChangeHobbies.bind(this);
-    this.onChangeEmail =  this.onChangeEmail.bind(this);
+        super(props)
 
-    this.state = {
-        Name: "",
-        Gender: "",
-        Age: "",
-        State: "",
-        Hobbies: "",
-        Email: ""
+        this.state = {
+            name: '',
+            age: '',
+            gender: '',
+            state: '',
+            hobbies: '',
+            email: ''
+        }
+    }
+
+    changeHandler = e => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    submitHandler = e => {
+        e.preventDefault()
+        console.log(this.state)
+        axios
+            // .post('https://jsonplaceholder.typicode.com/posts', this.state)
+            // .post('https://jsonplaceholder.typicode.com/api/users', this.state)
+            // .post('mongodb://heroku_zmvwk6f9:l0bbp63puskr1vblm7q18qriom@ds259787.mlab.com:59787/heroku_zmvwk6f9', this.state)
+            // .post('/api/users')
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    render() {
+        const { name, age, gender, state, hobbies, email } = this.state
+        return (
+            <div>
+                <form onSubmit={this.submitHandler}>
+                    <div>
+                        <label>Name:  </label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={name}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <div>
+                        <label>Age:  </label>
+                        <input
+                            type="text"
+                            name="age"
+                            value={age}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <div>
+                        <label>Gender:  </label>
+                        <input
+                            type="text"
+                            name="gender"
+                            value={gender}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <div>
+                        <label>State:  </label>
+                        <input
+                            type="text"
+                            name="state"
+                            value={state}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <div>
+                        <label>Hobbies:  </label>
+                        <input
+                            type="text"
+                            name="hobbies"
+                            value={hobbies}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <div>
+                        <label>Email:  </label>
+                        <input
+                            type="text"
+                            name="email"
+                            value={email}
+                            onChange={this.changeHandler}
+                        />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        )
     }
 }
 
-onChangeName(e) {
-    this.setState({
-      Name: e.target.value
-    });
-  }
-onChangeGender(e) {
-    this.setState({
-      Gender: e.target.value
-    });
-  }
-onChangeAge(e) {
-    this.setState({
-      Age: e.target.value
-    });
-  }
-onChangeState(e) {
-    this.setState({
-      State: e.target.value
-    });
-  }
-onChangeHobbies(e) {
-    this.setState({
-      Hobbies: e.target.value
-    });
-  }
-onChangeEmail(e) {
-    this.setState({
-      Email: e.target.value
-    });
-  }
-  onSubmit(e) {
-    e.preventDefault();
-    this.setState({
-        Name: "",
-        Gender: "",
-        Age: "",
-        State: "",
-        Hobbies: "",
-        Email: ""
-    })
-  }
-
-  
-render() {
-    return (
-            <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                    <label>Name:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.Name}
-                      onChange={this.onChangeName}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>Gender:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.Gender}
-                      onChange={this.onChangeGender}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>Age:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.Age}
-                      onChange={this.onChangeAge}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>State:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.State}
-                      onChange={this.onChangeState}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>Hobbies:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.Hobbies}
-                      onChange={this.onChangeHobbies}
-                      />
-                </div>
-                <div className="form-group">
-                    <label>Email:  </label>
-                    <input 
-                      type="text" 
-                      className="form-control" 
-                      value={this.state.Email}
-                      onChange={this.onChangeEmail}
-                      />
-                </div>
-                    <button><input type="submit" value="Submit!" className="btn btn-primary"/></button>
-            </form>
-    )}
-}
-export default Profile;
+export default PostForm

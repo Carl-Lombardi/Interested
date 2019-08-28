@@ -23,13 +23,12 @@ class Results extends Component {
          
             <div className="results">
                 <div className="results-header">
-                {/* <Results1 results={this.state.results} /> */}
                     <ControlledOpenSelect></ControlledOpenSelect>
                 </div>
 
 <ul>
   {this.state.users.map(users =>
-    <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state}</li>
+    <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state} {users.gender}</li>
     )}
 </ul>
             </div>
