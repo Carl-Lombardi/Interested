@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Results1 from '../../components/results/results';
+import Toolbar from "../../components/toolbar/toolbar";
 import ControlledOpenSelect from "../../components/gen/gen";
 
 
@@ -23,6 +23,7 @@ class Results extends Component {
          
             <div className="results">
                 <div className="results-header">
+                    <Toolbar></Toolbar>
                     <ControlledOpenSelect></ControlledOpenSelect>
                 </div>
 
