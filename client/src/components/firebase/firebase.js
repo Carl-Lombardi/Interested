@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import fire from '../../config/Fire';
-import Home from "../../pages/Home/home";
+import Pages from "../../pages/pages";
 import Login from "../firebase/Login";
+
 
 class Firebase1 extends Component {
     constructor() {
@@ -47,11 +48,13 @@ render() {
     return (
         <div className="Firebase">
             {this.state.user ? (
-                <Home />
+                <Pages />
             ) :
                 (
-                    <Login />
-                )}
+                    <Login />   
+               )
+            }
+                        
         </div>
     );
                 }           

@@ -1,0 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Profile from "../components/profile/profile";
+import Results from "../pages/results/results";
+import Home from "../pages/Home/home"
+
+
+
+function Pages() {
+    return (
+        <div >
+            <Router>
+                <div>
+                     <Route exact path="/" component={Home} />
+                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/results" component={Results} />
+                </div>
+            </Router>
+        </div>
+    );
+}
+
+
+export default Pages;
