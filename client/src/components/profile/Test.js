@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Toolbar from '../toolbar/toolbar';
 import DeleteBtn from "../DeleteBtn/index";
+import './profile.css';
 // import axios from 'axios'
 import API from '../../utils/API';
 import { Link } from "react-router-dom";
