@@ -132,9 +132,9 @@ class PostForm extends Component {
               <List>
                 {this.state.users.map(users => (
                   <ListItem key={users._id}>
-                    <Link to={"/api/users" + users._id}>
+                    <Link to={"/api/users/" + users._id}>
                       <strong>
-                        Name: {users.name} Age: {users.age}
+                        Name: {users.name} Age: {users.age} ------- ID: {users._id}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteUser(users._id)} />
@@ -145,7 +145,6 @@ class PostForm extends Component {
               <h3>No Results to Display</h3>
             )}
 
-              {/* <DeleteBtn onClick={() => this.deleteBook(users._id)} /> */}
 
             </div>
         )
