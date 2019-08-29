@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import SideToggleButton from '../sideToggle/sideToggleButton.js';
 import './toolbar.css';
+import LogoutBtn from '../logoutBtn/logoutBtn';
 
 const Toolbar = props => (
     <header className="toolbar">
@@ -27,6 +28,9 @@ const Toolbar = props => (
                         <Link to="/results" className={window.location.pathname === "/results" ? "nav-link active" : "nav-link"}>
                             Results
                         </Link>
+                    </li>
+                    <li>
+                        <LogoutBtn/>
                     </li>
                 </ul>
             </div>

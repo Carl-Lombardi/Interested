@@ -50,8 +50,8 @@ export default function ControlledOpenSelect() {
         >
           
          <MenuItem value=""><em>None</em></MenuItem>
-         <MenuItem value="Male">Male</MenuItem>
-         <MenuItem value="Female">Female</MenuItem>
+         <MenuItem value="male">Male</MenuItem>
+         <MenuItem value="female">Female</MenuItem>
           {/* <MenuItem value="Agender">Agender</MenuItem>
           <MenuItem value="Androgyne">Androgyne</MenuItem>
           <MenuItem value="Androgynous">Androgynousr</MenuItem>

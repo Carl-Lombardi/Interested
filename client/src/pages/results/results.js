@@ -29,9 +29,11 @@ class Results extends Component {
 
 <ul>
   {this.state.users.map(users =>
-    <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state} {users.gender}</li>
+    <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state} {users.gender} {users._id}</li>
     )}
 </ul>
+
+{/* .filter through for gender search----radio form for gender */}
             </div>
         );
     }
