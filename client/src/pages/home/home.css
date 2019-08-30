@@ -8,8 +8,7 @@ body{
   
   .Home-logo {
     animation: App-logo-spin infinite 12s linear;
-    height: 800px;
-    
+    height: 700px; 
   }
   
   .Home-header {
