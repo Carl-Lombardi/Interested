@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import logo from "./images/logo.png";
-import "./home.css";
 import Toolbar from "../../components/toolbar/toolbar"
 
 
 
-class Home extends Component {
+class Users extends Component {
 
     render() {
         return (
@@ -16,11 +14,11 @@ class Home extends Component {
 
                 </div>
 
-                <img src={logo} className="Home-logo" alt="logo" />
+             
 
             </div>
         );
     }
 }
 
-export default Home;
+export default Users;

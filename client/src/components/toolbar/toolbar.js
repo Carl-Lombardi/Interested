@@ -30,6 +30,11 @@ const Toolbar = props => (
                         </Link>
                     </li>
                     <li>
+                    <Link to="/users" className={window.location.pathname === "/users" ? "nav-link active" : "nav-link"}>
+                            Users
+                        </Link>
+                        </li>
+                    <li>
                         <LogoutBtn/>
                     </li>
                 </ul>
