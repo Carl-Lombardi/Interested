@@ -22,7 +22,10 @@
       color:red;
   }
 
-
+.update-btn {
+  color: green;
+  margin-left: 1%;
+}
   .list-overflow-container li * {
     cursor: pointer;
   }
