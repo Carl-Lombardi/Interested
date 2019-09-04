@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import SideToggleButton from '../sideToggle/sideToggleButton.js';
 import './toolbar.css';
-import LogoutBtn from '../logoutBtn/logoutBtn';
+import fire from '../../config/Fire';
+
+
+const logout = () => {
+    fire.auth().signOut();
+};
 
 const Toolbar = props => (
     <header className="toolbar">
@@ -30,12 +35,9 @@ const Toolbar = props => (
                         </Link>
                     </li>
                     <li>
-                    <Link to="/users" className={window.location.pathname === "/users" ? "nav-link active" : "nav-link"}>
-                            Users
+                        <Link to="/" onClick={logout}>
+                            Logout
                         </Link>
-                        </li>
-                    <li>
-                        <LogoutBtn/>
                     </li>
                 </ul>
             </div>
