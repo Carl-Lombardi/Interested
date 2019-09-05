@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import PostForm2 from "../components/profile/Test";
+import PostForm from "../components/profile/Test";
 import Results from "../pages/results/results";
-import Home from "./Home/home";
+import Home from "./home/home";
+
 
 
 
