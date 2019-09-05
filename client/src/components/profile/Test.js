@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Toolbar from '../toolbar/toolbar';
-import DeleteBtn from "../DeleteBtn/index";
-import UpdateBtn from "../DeleteBtn/updateBtn";
+// import DeleteBtn from "../DeleteBtn/index";
+// import UpdateBtn from "../DeleteBtn/updateBtn";
 import './profile.css';
 import API from '../../utils/API';
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../List/index";
+// import { Link } from "react-router-dom";
+// import { List, ListItem } from "../List/index";
 import { Input, FormBtn } from "./testbtn";
 class PostForm extends Component {
   state = {
@@ -16,31 +16,30 @@ class PostForm extends Component {
     state: '',
     hobbies: '',
     email: '',
-    id: ''
   };
 
-  componentDidMount() {
-    this.loadUsers();
-  }
+  // componentDidMount() {
+  //   this.loadUsers();
+  // }
 
-  loadUsers = () => {
-    API.getUsers()
-      .then(res =>
-        this.setState({ users: res.data, name: "", age: "", gender: "", state: "", hobbies: "", email: "", _id: "" }
+  // loadUsers = () => {
+  //   API.getUsers()
+  //     .then(res =>
+  //       this.setState({ users: res.data, name: "", age: "", gender: "", state: "", hobbies: "", email: "", _id: "" }
 
-        ))
+  //       ))
 
 
-      .catch(err => console.log(err));
+  //     .catch(err => console.log(err));
 
-  };
+  // };
 
   //try to update users
   updateUser = id => {
     API.updateUser(id)
       .then(res => this.loadUsers())
       .catch(err => console.log(err));
-  }
+  };
 
   deleteUser = id => {
     API.deleteUser(id)
@@ -65,18 +64,17 @@ class PostForm extends Component {
         state: this.state.state,
         hobbies: this.state.hobbies,
         email: this.state.email,
-        _id: this.state._id
       })
-        .then(res => this.loadUsers())
+        // .then(res => this.loadUsers())
         .catch(err => console.log(err));
     }
   };
 
   render() {
-    const { name, age, gender, state, hobbies, email, _id } = this.state
+    const { name, age, gender, state, hobbies, email, } = this.state
 
     return (
-      <div class="profilepage">
+      <div className="profilepage">
         <Toolbar />
         <form onSubmit={this.handleFormSubmit} id="formbtn">
           <div id="name">
@@ -133,7 +131,7 @@ class PostForm extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          {/* <div>
             <label>ID:  </label>
             <Input
               type="text"
@@ -141,7 +139,7 @@ class PostForm extends Component {
               value={_id}
               onChange={this.handleInputChange}
             />
-          </div>
+          </div> */}
           <div id="button">
             <FormBtn
               onClick={this.handleFormSubmit}
@@ -154,7 +152,7 @@ class PostForm extends Component {
 
 
 
-
+{/* 
         {this.state.users.length ? (
           <List>
             {this.state.users.map(users => (
@@ -174,7 +172,7 @@ class PostForm extends Component {
           </List>
         ) : (
             <h3>No Results to Display</h3>
-          )}
+          )} */}
 
 
       </div>
