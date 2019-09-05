@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Toolbar from '../toolbar/toolbar';
-import DeleteBtn from "../DeleteBtn/index";
-import UpdateBtn from "../DeleteBtn/updateBtn";
+// import DeleteBtn from "../DeleteBtn/index";
+// import UpdateBtn from "../DeleteBtn/updateBtn";
 import './profile.css';
 import API from '../../utils/API';
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../List/index";
+// import { Link } from "react-router-dom";
+// import { List, ListItem } from "../List/index";
 import { Input, FormBtn } from "./testbtn";
 class PostForm extends Component {
   state = {
@@ -40,7 +40,7 @@ class PostForm extends Component {
     API.updateUser(id)
       .then(res => this.loadUsers())
       .catch(err => console.log(err));
-  }
+  };
 
   deleteUser = id => {
     API.deleteUser(id)
@@ -154,7 +154,7 @@ class PostForm extends Component {
 
 
 
-
+{/* 
         {this.state.users.length ? (
           <List>
             {this.state.users.map(users => (
@@ -174,7 +174,7 @@ class PostForm extends Component {
           </List>
         ) : (
             <h3>No Results to Display</h3>
-          )}
+          )} */}
 
 
       </div>
