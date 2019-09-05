@@ -22,10 +22,7 @@
       color:red;
   }
 
-.update-btn {
-  color: green;
-  margin-left: 1%;
-}
+
   .list-overflow-container li * {
     cursor: pointer;
   }
@@ -54,3 +51,65 @@ element.style {
     color: red;
     margin-left: 2%;
 }
+
+
+
+
+#button {
+    background: #383838;
+    color: #ddd;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+#formbtn {
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 670px;
+  margin-right: 670px;
+  margin-top: 30px;
+}
+
+#name{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#age{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#gender{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#state{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#hobbies{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#email{
+  color: #ddd;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* .profilepage {
+  margin-left: 250px;
+} */
