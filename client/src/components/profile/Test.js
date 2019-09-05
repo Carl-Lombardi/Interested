@@ -48,6 +48,7 @@ class PostForm extends Component {
       })
         // .then(res => this.loadUsers())
         .catch(err => console.log(err));
+        alert("Profile Submitted! Please go to the Results Page for all Interested Users!");
     }
   };
 
