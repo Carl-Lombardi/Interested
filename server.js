@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-mongoose.connect('mongodb://heroku_zmvwk6f9:l0bbp63puskr1vblm7q18qriom@ds259787.mlab.com:59787/heroku_zmvwk6f9', {useCreateIndex:true, useNewUrlParser: true }, 
+mongoose.connect('mongodb://heroku_fdbt2cm1:deg6bbpc8lfr4ldj14actncmcg@ds129023.mlab.com:29023/heroku_fdbt2cm1', {useCreateIndex:true, useNewUrlParser: true }, 
 ); 
 
 app.use('/api', require('./routes/api'));
