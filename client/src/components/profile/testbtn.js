@@ -9,11 +9,3 @@ export function Input(props) {
     </div>
   );
 }
-
-export function FormBtn(props) {
-  return (
-    <button {...props} style={{ float: "right", marginBottom: 100 }} id="button">
-      {props.children}
-    </button>
-  );
-}
