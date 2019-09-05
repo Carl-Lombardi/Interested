@@ -92,7 +92,7 @@ class PostForm2 extends Component {
   render() {
 
     return (
-      <div class="profilepage">
+      <div className="profilepage">
         <Toolbar />
 <div>
         {this.state.users.length ? (
