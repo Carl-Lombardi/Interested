@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import Toolbar from '../toolbar/toolbar';
-// import DeleteBtn from "../DeleteBtn/index";
-// import UpdateBtn from "../DeleteBtn/updateBtn";
 import './profile.css';
 import API from '../../utils/API';
-// import { Link } from "react-router-dom";
-// import { List, ListItem } from "../List/index";
-import { Input, FormBtn } from "./testbtn";
+import { Input, } from "./testbtn";
+import ContainedButtons from '../button/button';
 class PostForm extends Component {
   state = {
     users: [],
@@ -17,22 +14,6 @@ class PostForm extends Component {
     hobbies: '',
     email: '',
   };
-
-  // componentDidMount() {
-  //   this.loadUsers();
-  // }
-
-  // loadUsers = () => {
-  //   API.getUsers()
-  //     .then(res =>
-  //       this.setState({ users: res.data, name: "", age: "", gender: "", state: "", hobbies: "", email: "", _id: "" }
-
-  //       ))
-
-
-  //     .catch(err => console.log(err));
-
-  // };
 
   //try to update users
   updateUser = id => {
@@ -131,50 +112,16 @@ class PostForm extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          {/* <div>
-            <label>ID:  </label>
-            <Input
-              type="text"
-              name="_id"
-              value={_id}
-              onChange={this.handleInputChange}
-            />
-          </div> */}
           <div id="button">
-            <FormBtn
+
+            <ContainedButtons
               onClick={this.handleFormSubmit}
             >
               Submit User
-              </FormBtn>
+
+           </ContainedButtons>
           </div>
         </form>
-
-
-
-
-{/* 
-        {this.state.users.length ? (
-          <List>
-            {this.state.users.map(users => (
-              <ListItem key={users._id}>
-                <Link to={"/api/users/" + users._id}>
-                  <strong>
-                    Name: {users.name} Age: {users.age} ------- ID: {users._id}
-                  </strong>
-                </Link>
-                <DeleteBtn onClick={() => this.deleteUser(users._id)} />
-                <UpdateBtn onClick={() => this.updateUser(users._id)} />
-                {console.log()}
-
-              </ListItem>
-            ))}
-
-          </List>
-        ) : (
-            <h3>No Results to Display</h3>
-          )} */}
-
-
       </div>
     )
   }

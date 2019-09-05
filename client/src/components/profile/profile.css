@@ -15,6 +15,7 @@
     border-radius: 0px;
     border-left: none;
     border-right: none;
+    color: #232121;
   }
   
   .delete-btn {
@@ -60,9 +61,10 @@ element.style {
     color: #ddd;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-    margin-left: 70px;
-    margin-top: 30px;
+    position: initial;
+    float: left;
+    /* margin-left: 70px;
+    margin-top: 30px; */
 }
 
 #formbtn {
@@ -110,6 +112,17 @@ element.style {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* .profilepage {
-  margin-left: 250px;
-} */
+.profilepage {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  color: white;
+  /* position: inherit; */
+  /* float: left; */
+}
+
+
+.delete-btn {
+  color: red;
+  position: inherit;
+  float: inherit;
+}

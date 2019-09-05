@@ -1,50 +1,7 @@
-// import React, { Component } from "react";
-// import Toolbar from "../../components/toolbar/toolbar";
-// import ControlledOpenSelect from "../../components/gen/gen";
-
-
-// class Results extends Component {
-//  constructor() {
-//    super();
-//     this.state = {
-//         users: []
-//       }
-//     }
-//       componentDidMount() {
-//         fetch('/api/users')
-//         .then(res => res.json())
-//         .then(users => this.setState({users}, () => console.log("Matches Fetched", users)))
-//         .catch(console.log)
-//       }
-
-
-//     render() {
-//         return (
-         
-//             <div className="results">
-//                 <div className="results-header">
-//                     <Toolbar></Toolbar>
-//                     <ControlledOpenSelect></ControlledOpenSelect>
-//                 </div>
-
-// <ul>
-//   {this.state.users.map(users =>
-//     <li key={users.id}>{ users.name } {users.age} { users.email } {users.hobbies} {users.state} {users.gender} {users._id}</li>
-//     )}
-// </ul>
-
-//             </div>
-//         );
-//     }
-//  }
-//  export default Results;
-
-
-
 import React, { Component } from 'react';
 import Toolbar from '../../components/toolbar/toolbar';
 import DeleteBtn from "../../components/DeleteBtn/index";
-import UpdateBtn from "../../components/DeleteBtn/updateBtn";
+// import UpdateBtn from "../../components/DeleteBtn/updateBtn";
 import '../../components/profile/profile.css';
 import API from '../../utils/API';
 import { List, ListItem } from "../../components/List/index";
@@ -102,8 +59,20 @@ class PostForm2 extends Component {
                   <div id = "button">
                     Name: {users.name} Age: {users.age} Gender: {users.gender} Hobbies: {users.hobbies}
                   </div>
-                <DeleteBtn onClick={() => this.deleteUser(users._id)} />
-                <UpdateBtn onClick={() => this.updateUser(users._id)} />
+                  
+{/* testing buttons */}
+<div className= "delete-btn">
+                  <DeleteBtn
+                  onClick={() => this.deleteUser(users._id)}
+                  >
+              Delete User
+
+           </DeleteBtn>
+           </div>
+
+
+
+                {/* <UpdateBtn onClick={() => this.updateUser(users._id)} /> */}
                 {console.log()}
 
               </ListItem>
