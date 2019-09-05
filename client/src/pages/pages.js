@@ -13,7 +13,7 @@ function Pages() {
             <Router>
                 <div>
                      <Route exact path="/" component={Home} />
-                     <Route exact path="/profile" component={PostForm2} />
+                     <Route exact path="/profile" component={PostForm} />
                     <Route exact path="/results" component={Results} />
                 </div>
             </Router>
