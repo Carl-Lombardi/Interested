@@ -3,16 +3,10 @@ import Toolbar from '../toolbar/toolbar';
 import DeleteBtn from "../DeleteBtn/index";
 import UpdateBtn from "../DeleteBtn/updateBtn";
 import './profile.css';
-// import axios from 'axios'
 import API from '../../utils/API';
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../List/index";
 import { Input, FormBtn } from "./testbtn";
-//trying to pull firebase user email
-
-// import fire from '../../config/Fire';
-// import firebase1 from '../firebase/firebase';
-// import Firebase1 from '../firebase/firebase';
 class PostForm extends Component {
   state = {
     users: [],
@@ -25,37 +19,28 @@ class PostForm extends Component {
     id: ''
   };
 
-
-/* <button onclick="myFunction()">Try it</button>
-
-function myFunction() {
-  var x = document.getElementById("myRadio").value;
-  document.getElementById("demo").innerHTML = x;
-} */
-
   componentDidMount() {
     this.loadUsers();
   }
 
   loadUsers = () => {
     API.getUsers()
-      .then(res => 
+      .then(res =>
         this.setState({ users: res.data, name: "", age: "", gender: "", state: "", hobbies: "", email: "", _id: "" }
-    
+
         ))
 
 
       .catch(err => console.log(err));
-      // console.log(users);
 
   };
 
-//try to update users
-updateUser = id => {
-  API.updateUser(id)
-  .then(res => this.loadUsers())
-  .catch(err => console.log(err));
-}
+  //try to update users
+  updateUser = id => {
+    API.updateUser(id)
+      .then(res => this.loadUsers())
+      .catch(err => console.log(err));
+  }
 
   deleteUser = id => {
     API.deleteUser(id)
@@ -87,25 +72,14 @@ updateUser = id => {
     }
   };
 
-  // if (email == users.email) {
-  //   return{
-  //     </DeleteBtn/>
-
-  //   }
-  //    return {}
-
-
-
-
   render() {
     const { name, age, gender, state, hobbies, email, _id } = this.state
 
-    // if (profile.email == this.state.email) {
     return (
-      <div>
+      <div class="profilepage">
         <Toolbar />
-        <form onSubmit={this.handleFormSubmit}>
-          <div>
+        <form onSubmit={this.handleFormSubmit} id="formbtn">
+          <div id="name">
             <label>Name:  </label>
             <Input
               type="text"
@@ -114,7 +88,7 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div id="age">
             <label>Age:  </label>
             <Input
               type="text"
@@ -123,7 +97,7 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div id="gender">
             <label>Gender:  </label>
             <Input
               type="text"
@@ -132,7 +106,7 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div id="state">
             <label>State:  </label>
             <Input
               type="text"
@@ -141,7 +115,7 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div id="hobbies">
             <label>Hobbies:  </label>
             <Input
               type="text"
@@ -150,7 +124,7 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div id="email">
             <label>Email:  </label>
             <Input
               type="text"
@@ -168,16 +142,17 @@ updateUser = id => {
               onChange={this.handleInputChange}
             />
           </div>
-                    <FormBtn
-            disabled={!(this.state.name && this.state.age)}
-            onClick={this.handleFormSubmit}
-          >
-            Submit User
+          <div id="button">
+            <FormBtn
+              onClick={this.handleFormSubmit}
+            >
+              Submit User
               </FormBtn>
+          </div>
         </form>
 
 
-     
+
 
 
         {this.state.users.length ? (
@@ -195,7 +170,7 @@ updateUser = id => {
 
               </ListItem>
             ))}
-            
+
           </List>
         ) : (
             <h3>No Results to Display</h3>
@@ -206,6 +181,5 @@ updateUser = id => {
     )
   }
 }
-// }
 
 export default PostForm

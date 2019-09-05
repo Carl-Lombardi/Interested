@@ -6,13 +6,14 @@ import Home from "./home/home";
 
 
 
+
 function Pages() {
     return (
         <div >
             <Router>
                 <div>
                      <Route exact path="/" component={Home} />
-                     <Route exact path="/profile" component={PostForm} />
+                     <Route exact path="/profile" component={PostForm2} />
                     <Route exact path="/results" component={Results} />
                 </div>
             </Router>

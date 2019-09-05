@@ -33,7 +33,6 @@ class Results extends Component {
     )}
 </ul>
 
-{/* .filter through for gender search----radio form for gender */}
             </div>
         );
     }
